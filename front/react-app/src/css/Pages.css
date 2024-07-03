@@ -14,8 +14,24 @@
 
 
 .contact-bg {
-  background-color: #FDD2E6;
+  background-color: #EBC5A4;
   min-height: 100vh;
+}
+
+.half {
+  width: 50%; /* Each half takes 50% of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-half {
+  background-color: #ffcccb; /* Light red */
+}
+
+.right-half {
+  background-color: #add8e6; /* Light blue */
 }
 
 .card {
