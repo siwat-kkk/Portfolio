@@ -3,7 +3,7 @@
 @tailwind base;
 
 .home-bg {
-  background-color: #E2FDD2;
+  background-color: #2B2B2B;
   min-height: 100vh;
   border: 2px solid red;
 }
