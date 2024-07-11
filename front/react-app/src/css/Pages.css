@@ -76,7 +76,7 @@
 }
 
 .card:hover {
-  box-shadow: 12px 12px 12px rgb(0, 0, 0, 0.1),-1px -1px 1px rgb(68, 68, 68);
+  box-shadow: 12px 12px 12px rgb(0, 0, 0, 0.1)inset,-1px -1px 1px rgb(68, 68, 68)inset;/* ลองลบ inset ได้*/
 }
 
 
@@ -111,6 +111,11 @@
   transition: background-color 0.3s; /* Smooth transition */
   width: 100%; /*
    align-self: center; */
+}
+
+.card-link:hover{
+  border-width: 2px;
+  border-color: #E7D2FD;
 }
 
 .card-link:hover {
