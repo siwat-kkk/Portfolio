@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import About from "../../pages/About";
-import Nav from "./Nav";
-
-const plugin = require("tailwindcss/plugin");
 
 const Navbar = () => {
   const [selectedItem, setSelectedItem] = useState("Home");
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
 
   const handleClick = (item) => {
     setSelectedItem(item);
@@ -17,8 +15,21 @@ const Navbar = () => {
     return selectedItem === item ? "text-blue-500" : "text-white";
   };
 
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+
+    setVisible(isVisible);
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible]);
+
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className={`navbar ${visible ? 'top-0' : '-top-full'} bg-white border-gray-200 dark:bg-gray-900`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <NavLink
           to="/home"
@@ -59,12 +70,10 @@ const Navbar = () => {
                 to="/home"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    color: isActive ? "#b6fdf3" : "white",
-                    textDecoration: "none",
-                  };
-                }}
+                style={({ isActive }) => ({
+                  color: isActive ? "#b6fdf3" : "white",
+                  textDecoration: "none",
+                })}
               >
                 Home
               </NavLink>
@@ -74,12 +83,10 @@ const Navbar = () => {
                 to="/about"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    color: isActive ? "#b6fdf3" : "white",
-                    textDecoration: "none",
-                  };
-                }}
+                style={({ isActive }) => ({
+                  color: isActive ? "#b6fdf3" : "white",
+                  textDecoration: "none",
+                })}
               >
                 About
               </NavLink>
@@ -89,12 +96,10 @@ const Navbar = () => {
                 to="/contact"
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 aria-current="page"
-                style={({ isActive, isPending, isTransitioning }) => {
-                  return {
-                    color: isActive ? "#b6fdf3" : "white",
-                    textDecoration: "none",
-                  };
-                }}
+                style={({ isActive }) => ({
+                  color: isActive ? "#b6fdf3" : "white",
+                  textDecoration: "none",
+                })}
               >
                 Contact
               </NavLink>

@@ -14,11 +14,11 @@ function Home() {
           </a>
         </div>
       </div>
-      <h2 className="text-2xl font-bold">This is Home</h2>
+      {/* <h2 className="text-2xl font-bold">This is Home</h2>
       <div className="my-4 w-32 h-32 bg-purple-500 flex items-center justify-center text-white rounded-lg">
         <p>Home Block</p>
       </div>
-      <p className="mt-4 text-lg">Home is a simple</p>
+      <p className="mt-4 text-lg">Home is a simple</p> */}
     </div>
   );
 }

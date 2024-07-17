@@ -13,7 +13,6 @@
   min-height: 100vh;
 }
 
-
 .contact-bg {
   background-color: #EBC5A4;
   min-height: 100vh;
@@ -37,48 +36,31 @@
 
 .card-container {
   display: flex;
-  width: 100%;
+  width: 95%; /* Take 95% of the page width */
+  height: 90vh; /* Take 95% of the page height */
   justify-content: center; /* Center the card horizontally */
   padding: 20px; /* Space inside the container */
   box-sizing: border-box; /* Include padding in the total width and height */
-  /* border: 10px solid #0056b3; */
+  margin: 0 auto; /* Center the container */
+  border-width: 3px;
+  border-color: #E7D2FD;
 }
-
-/* .card { */
-  /* background-color: #4B4B4B; White background */
-  /* border-bottom: 1px solid #ddd; Light gray border */
-  /* border-right: 1px solid #ddd; */
-  /* border-radius: 8px; Rounded corners */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Shadow for depth */
-  /* padding: 20px; Padding inside the card */
-  /* margin: 8px; Margin around the card */
-  /* width: 100%; Full width */
-  /* max-width: 1000px; Max width */
-  /* display: flex; */
-  /* flex-direction: column; Stack children vertically */
-  /* box-sizing: border-box; Include padding and border in the element's total width and height */
-/* } */
 
 .card {
   background-color: #4B4B4B; /* Dark gray card background */
-  border: 1px solid #555; /* Bottom border */
+  border-bottom: 1px solid #555; /* Bottom border */
   border-radius: 8px; /* Rounded corners */
   border-color: rgb(128, 128, 128);
-   /*box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1), Light shadow for depth */
-              /* 0 0 10px rgba(255, 255, 255, 0.1); Subtle glow effect */
   padding: 20px; /* Padding inside the card */
-  max-width: 800px; /* Optional: fixed width */
-  margin: 20px; /* Optional: margin around the card */
-  display: flex;
-  flex-direction: column; /* Ensure the children are stacked vertically */
-  width: 100%;
-  color: #E0E0E0; /* Light text color for readability */
+  width: 100%; /* Full width of its container */
+  height: 100%; /* Full height of its container */
+  max-width: 1400px; /* Max width */
+  /*color: #E0E0E0;  Light text color for readability */
 }
 
 .card:hover {
-  box-shadow: 12px 12px 12px rgb(0, 0, 0, 0.1)inset,-1px -1px 1px rgb(68, 68, 68)inset;/* ลองลบ inset ได้*/
+  box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1) inset, -1px -1px 1px rgba(68, 68, 68, 0.1) inset; /* Adjusted box shadow */
 }
-
 
 .card-title {
   font-size: 1.5em; /* Larger font size for the title */
@@ -89,17 +71,11 @@
 }
 
 .card-content {
-  font-size: 1em; /* Normal font size for content */
-  color: #666; /* Gray text color */
+  font-size: 3em; /* Normal font size for content */
+  color: #e2e2e2; /* Gray text color */
   margin-bottom: 20px; /* Space below the content */
   text-align: center; /* Center the content text */
 }
-
-/* .card-link-container { */
-  /* width: 100%; Make the container take up the full width */
-  /* display: flex; */
-  /* justify-content: center; Center the link horizontally */
-/* } */
 
 .card-link {
   display: inline-block; /* Make the link behave like a button */
@@ -109,17 +85,14 @@
   text-decoration: none; /* Remove underline */
   border-radius: 4px; /* Rounded corners */
   transition: background-color 0.3s; /* Smooth transition */
-  width: 100%; /*
-   align-self: center; */
-}
-
-.card-link:hover{
-  border-width: 2px;
-  border-color: #E7D2FD;
+  width: 100%; /* Full width */
+  text-align: center; /* Center the link text */
 }
 
 .card-link:hover {
   background-color: #0056b3; /* Darker blue on hover */
+  border-width: 2px;
+  border-color: #E7D2FD;
 }
 
 @media (max-width: 600px) {
