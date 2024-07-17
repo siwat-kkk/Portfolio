@@ -12,7 +12,7 @@ import About from "./pages/About";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />

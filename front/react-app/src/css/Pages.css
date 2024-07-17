@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind base;
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .home-bg {
   background-color: #212121;
   min-height: 100vh;
@@ -36,7 +42,7 @@
 
 .card-container {
   display: flex;
-  width: 95%; /* Take 95% of the page width */
+  width: 95vw; /* Take 95% of the page width */
   height: 90vh; /* Take 95% of the page height */
   justify-content: center; /* Center the card horizontally */
   padding: 20px; /* Space inside the container */
@@ -54,7 +60,7 @@
   padding: 20px; /* Padding inside the card */
   width: 100%; /* Full width of its container */
   height: 100%; /* Full height of its container */
-  max-width: 1400px; /* Max width */
+  max-width: 80vw; /* Max width */
   /*color: #E0E0E0;  Light text color for readability */
 }
 
@@ -91,8 +97,9 @@
 
 .card-link:hover {
   background-color: #0056b3; /* Darker blue on hover */
-  border-width: 2px;
-  border-color: #E7D2FD;
+  /* border-width: 2px; */
+  border-inline: 2px solid #E7D2FD;
+  /* border-color: #E7D2FD; */
 }
 
 @media (max-width: 600px) {

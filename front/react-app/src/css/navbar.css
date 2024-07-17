@@ -9,4 +9,10 @@
   width: 100%;
   transition: top 0.3s;
   z-index: 1000; /* Ensure it is above other content */
+  background-color: #111827;
+}
+
+.nav-container{
+  max-width: 1440px;
+  margin: 0 auto;
 }
