@@ -9,16 +9,28 @@ function Home() {
         <div className="card">
           <h1 className="card-title">Card Title</h1>
           <p className="card-content">This is some content inside the card.</p>
-          <a href="https://example.com" className="card-link" target="_blank" rel="noopener noreferrer">
-            Read More
-          </a>
+          <div className="parent-cardlink-container">
+            <a
+              href="https://example.com"
+              className="card-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Read More
+            </a>
+          </div>
         </div>
       </div>
       <div className="card-container">
         <div className="card">
           <h1 className="card-title">Card Title</h1>
           <p className="card-content">This is some content inside the card.</p>
-          <a href="https://example.com" className="card-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://example.com"
+            className="card-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Read More
           </a>
         </div>

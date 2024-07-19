@@ -4,12 +4,15 @@
 
 /* CSS for the navbar */
 .navbar {
-  position: sticky;
+  position: static;
   top: 0;
   width: 100%;
   transition: top 0.3s;
   z-index: 1000; /* Ensure it is above other content */
   background-color: #111827;
+  /* background-color: rgba(0,0,0,0.7); */
+  opacity: 1;
+  color: #212121;
 }
 
 .nav-container{
