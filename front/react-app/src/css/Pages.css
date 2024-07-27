@@ -15,41 +15,49 @@
 }
 
 .about-bg {
-  background-color: #E7D2FD;
+  background-color: #F0F0F2;
   min-height: 100vh;
 }
 
 .contact-bg {
-  background-color: #EBC5A4;
+  background-color: #F0F0F2;
   min-height: 100vh;
 }
 
-.half {
-  width: 50%; /* Each half takes 50% of the width */
+.contactpage{
+  position: relative;
+}
+
+.firsthalf {
+  width: 70%; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  background-color: #F0F0F2;
 }
 
-.left-half {
-  background-color: #ffcccb; /* Light red */
-}
-
-.right-half {
-  background-color: #add8e6; /* Light blue */
+.secondhalf {  
+  width: 30%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  background-color: #585858;
 }
 
 .card-container {
   display: flex;
   width: 35vw; /* Take 50% of the page width */
-  /*height: 90vh;  Take 90% of the page height */
   justify-content: center; /* Center the card horizontally */
   padding: 20px; /* Space inside the container */
   box-sizing: border-box; /* Include padding in the total width and height */
   margin: 0 auto; /* Center the container */
-  /* border-width: 3px; */
-  /* border-color: #E7D2FD; */
+  border-width: 3px; 
+  border-color: #ff0000;
   min-height: fit-content;
 }
 
@@ -62,14 +70,14 @@
   width: 100%; /* Full width of its container */
   height: 100%; /* Full height of its container */
   max-width: 50vw; /* Max width */
-  
+  border-color: #2600ff;
+  border-width: 3px; 
   /* align-content: center; อันนี้ตรงกลางระหว่าง บน-ล่าง */
   /*color: #E0E0E0;  Light text color for readability */
 }
 
 .card:hover {
   box-shadow: 12px 12px 12px rgba(218, 218, 218, 0.1) , -1px -1px 1px rgba(68, 68, 68, 0.1) ; /* Adjusted box shadow */
-  /* background-color: rgb(255, 254, 252); */
 }
 
 .card-title {
@@ -119,13 +127,16 @@
 }
 
 .non-card-container {
-  width: 30vw; /* Adjust width as needed */
+  width: 60vw; /* Adjust width as needed */
   margin: 20px auto; /* Center horizontally with some margin */
   padding: 20px; /* Padding inside the container */
   background-color: #E0E0E0; /* Background color */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   text-align: center; /* Center the text */
+  border-width: 2px; 
+  border-inline: 2px solid #E7D2FD;
+  border-color: #5b00bd;
 }
 
 .non-card-title {

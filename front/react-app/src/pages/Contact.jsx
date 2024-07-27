@@ -73,29 +73,36 @@ import "../css/Pages.css";
 
 function Contact() {
   return (
-    <div className="min-h-screen flex items-center justify-center relative">
-      <div className="flex w-full h-full absolute inset-0">
-        <div className="w-1/2 bg-blue-500"></div>
-        <div className="w-1/2 bg-green-500"></div>
-      </div>
-      <div className="z-10 flex flex-col items-center justify-center text-center">
-        <h2 className="text-2xl font-bold">This is Contact</h2>
-        <a
-          href="https://www.youtube.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="my-4 w-32 h-32 bg-purple-500 flex items-center justify-center text-white rounded-lg"
-        >
-          <div>
-            <p>Contact</p>
+    <div className="contactpage">
+      <div className="firsthalf">
+        <div className="min-h-screen flex items-center justify-center relative">
+          <div className="z-10 flex flex-col items-center justify-center text-center">
+            <h2 className="text-2xl font-bold">This is Contact</h2>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="my-4 w-32 h-32 bg-purple-500 flex items-center justify-center text-white rounded-lg"
+            >
+              <div>
+                <p>Contact</p>
+              </div>
+            </a>
+            <p className="mt-4 text-lg">
+              Click block to open YouTube in a new tab
+            </p>
           </div>
-        </a>
-        <p className="mt-4 text-lg">Click block to open YouTube in a new tab</p>
+        </div>
+      </div>
+      <div className="secondhalf">
+        <h1>Hello</h1>
+        <h1>Hello1</h1>
+        <h1>Hello2</h1>
+        <h1>Hello3</h1>
+        <h1>Hello4</h1>
       </div>
     </div>
   );
 }
 
 export default Contact;
-
-
