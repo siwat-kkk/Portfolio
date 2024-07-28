@@ -9,7 +9,7 @@
 }
 
 .home-bg {
-  background-color: #F0F0F2;
+  background-color: #252525;
   min-height: 100vh;
   /* border: 2px solid red; */
 }
@@ -51,7 +51,7 @@
 
 .card-container {
   display: flex;
-  width: 35vw; /* Take 50% of the page width */
+  width: 35%; /* Take 50% of the page width */
   justify-content: center; /* Center the card horizontally */
   padding: 20px; /* Space inside the container */
   box-sizing: border-box; /* Include padding in the total width and height */
@@ -59,10 +59,25 @@
   border-width: 3px; 
   border-color: #ff0000;
   min-height: fit-content;
+  position: absolute;
+  left: 0%;
+  top:40%;
+  align-self: center;
+  min-width: fit-content;
 }
 
+.landing-text{
+  color: #F0F0F2;
+  font-weight: bold;
+  font-size: 2.5em;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+
+
 .card {
-  background-color: #FDFDFF; /* Dark gray card background */
+  background-color: #252525; /* Dark gray card background */
   /* border-bottom: 1px solid #b31212; Bottom border */
   border-radius: 8px; /* Rounded corners */
   border-color: rgb(128, 128, 128);
@@ -70,14 +85,14 @@
   width: 100%; /* Full width of its container */
   height: 100%; /* Full height of its container */
   max-width: 50vw; /* Max width */
-  border-color: #2600ff;
-  border-width: 3px; 
+  /* border-color: #2600ff; */
+  /* border-width: 3px;  */
   /* align-content: center; อันนี้ตรงกลางระหว่าง บน-ล่าง */
   /*color: #E0E0E0;  Light text color for readability */
 }
 
 .card:hover {
-  box-shadow: 12px 12px 12px rgba(218, 218, 218, 0.1) , -1px -1px 1px rgba(68, 68, 68, 0.1) ; /* Adjusted box shadow */
+  box-shadow: 4px 4px 4px rgba(218, 218, 218, 0.1) , -3px -3px 3px rgba(0, 0, 0, 0.1) ; /* Adjusted box shadow */
 }
 
 .card-title {
@@ -155,5 +170,11 @@
   .card {
     padding: 10px; /* Less padding on smaller screens */
     margin: 10px; /* Less margin on smaller screens */
+  }
+}
+/* เช็คขนาดจอ แล้วจะเปลี่ยนค่าต่างๆตามที่ได้เขียนไว้ข้างล่าง */
+@media screen and (width<=800px){
+  .card-container {
+    top:10%;
   }
 }

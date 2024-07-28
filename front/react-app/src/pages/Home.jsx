@@ -5,12 +5,15 @@ import "../css/Pages.css";
 function Home() {
   return (
     <div className="home-bg flex">
-      <div className="non-card-container">
+      {/* <div className="non-card-container">
         <h2 className="non-card-title">Non-card Content Title</h2>
         <p className="non-card-content">This is some content inside the non-card content block.</p>
-      </div>
+      </div> */}
       <div className="card-container">
         <div className="card">
+        <h1 className="landing-text">Welcome, nice to meet you all</h1>
+        </div>
+        {/* <div className="card">
           <h1 className="card-title">Card Title</h1>
           <p className="card-content">This is some content inside the card.</p>
           <div className="parent-cardlink-container">
@@ -23,7 +26,7 @@ function Home() {
               Read More
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       
     </div>
